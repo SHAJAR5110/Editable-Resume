@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script> 
+</head>
+
+<body>
+    <div class="container">
+        <h1>Editable Resume</h1>
+        <form id="form" action="">
+            <input type="file" name="picture" id="picture">
+            <br>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="Last Name"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" placeholder="abc@gmail.com" required><br>
+            <label for="phone">Contact Number:</label><br>
+            <input type="text" id="phone" name="phone" placeholder="0300-0000000" required><br>
+            <label for="gender">Gender:</label><br>
+            <select name="gender" id="gender" required>
+                <option value="" selected disabled hidden>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+            <label for="edu">Education:</label><br>
+            <select name="edu" id="edu" required>
+                <option value="" selected disabled hidden>Education</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Matric">Matric</option>
+            </select><br>
+            <label for="skills">Skills:</label><br>
+            <textarea name="skills" id="skills" placeholder="Write down your skills"></textarea><br>
+            <label for="exp">Experience:</label><br>
+            <textarea name="exp" id="exp" placeholder="Write something about your work experience"></textarea><br>
+
+            <center><button type="submit">Submit</button></center>
+        </form>
+    </div>
+    <br>
+    <div class="resumeDisplay" contenteditable="true"></div>
+    <button id="downloadBtn" style="width: 140px; display: none;">Download PDF</button>
+</body>
+
+</html>
